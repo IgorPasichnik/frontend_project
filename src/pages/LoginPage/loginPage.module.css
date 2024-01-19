@@ -1,0 +1,46 @@
+* {
+    margin: 0 auto;
+}
+
+.entry {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.entry_modal {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry_input {
+    margin: 10px;
+    width: 200px;
+}
+
+.entry_modal_bottom {
+    width: 225px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back {
+    margin-top: 50px;
+    display: flex;
+    align-content: center;
+}
+
+
