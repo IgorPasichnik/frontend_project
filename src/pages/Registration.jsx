@@ -32,11 +32,11 @@ export const Registration = () => {
     <RegistrationWrapper>
       <form>
         <div>
-          <label></label>
+          <label>Введите email</label>
           <input type="text" value={email} onChange={emailHandler} />
         </div>
         <div>
-          <label></label>
+          <label>Введите пароль</label>
           <input type="text" value={password} onChange={passwordHandler} />
         </div>
         <button onClick={registrationHandler}>Зарегистрироваться</button>

@@ -1,9 +1,12 @@
+import { useDispatch } from "react-redux";
 import { useAuthContext } from "../context/authContext";
 import { LoginWrapper } from "./login.styled";
 import { useState } from "react";
+import { login as reduxLogin } from "../store/userSlice";
 
 export const Login = () => {
   const { login } = useAuthContext();
+  const dispatch = useDispatch;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,6 +30,7 @@ export const Login = () => {
       });
       const data = await response.json();
       const { token } = data;
+      dispatch(reduxLogin(email));
       login(token);
     } catch (err) {
       console.log(err);
@@ -37,11 +41,11 @@ export const Login = () => {
     <LoginWrapper>
       <form>
         <div>
-          <label></label>
+          <label>Введите email</label>
           <input type="text" value={email} onChange={emailHandler} />
         </div>
         <div>
-          <label></label>
+          <label>Введите пароль</label>
           <input type="text" value={password} onChange={passwordHandler} />
         </div>
         <button onClick={loginHandler}>Вход</button>
