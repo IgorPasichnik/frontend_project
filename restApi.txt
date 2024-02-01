@@ -1,0 +1,6 @@
+/users get
+/users post
+/users/{id} get
+/users/{id} patch
+/users/{id} delete
+/users/{id}
