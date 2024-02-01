@@ -1,0 +1,10 @@
+* {
+  margin: 10px;
+}
+.gfg {
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
