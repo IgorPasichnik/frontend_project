@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>Введите имя</label>
+        <input type="text" aria-label="user" id="user" />
+        <div
+          class="user-error d-none"
+          aria-label="user-error"
+          id="user-error"
+        ></div>
+      </div>
+
+      <div>
+        <label>Введите email</label>
+        <input type="email" aria-label="email" id="email" />
+        <div
+          class="email-error d-none"
+          aria-label="email-error"
+          id="email-error"
+        ></div>
+      </div>
+
+      <div>
+        <label>Введите пароль</label>
+        <input type="text" aria-label="password" id="password" />
+        <div
+          class="password-error d-none"
+          aria-label="password-error"
+          id="password-error"
+        ></div>
+      </div>
+
+      <button id="submit" disabled>Отправить</button>
+    </form>
+
+    <style>
+      .user-error,
+      .email-error,
+      .password-error {
+        color: red;
+      }
+      .d-none {
+        display: none;
+      }
+
+      .input-error {
+        border-color: red;
+      }
+    </style>
+  </body>
+</html>
