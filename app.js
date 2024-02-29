@@ -10,18 +10,14 @@ export default () => {
   const handleClick = (event) => {
     event.preventDefault();
 
-    const amount = amountInput.value.trim();
+    const amount = amountInput.value;
 
     if (isAmountValid(amount) && parseInt(amount) > 0) {
       messageDiv.textContent = "Deposit successful";
-
-      setTimeout(() => (messageDiv.textContent = ""), 5000);
     } else {
       messageDiv.textContent = "Введите допустимое положительное целое число.";
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function () {
-    depositBtn.addEventListener("click", handleClick);
-  });
+  depositBtn.addEventListener("click", handleClick);
 };
